@@ -42,7 +42,7 @@
     <input type="text" placeholder="Find Friends" ng-model="findFriend.name">    
     <select ng-model="sortReverse" ng-options="option.value as option.display for option in sortOptions"></select>
     
-    <div class="friendList" ng-repeat="friend in myProfile.friends | filter : findFriend.name | orderBy : name : sortReverse">
+    <div class="friendList" ng-repeat="friend in myProfile.friends | filter : findFriend.name | orderBy : 'name' : sortReverse">
       <div class = "friendContainer">
         <span class="closeBtn" ng-click="removeFriend(friend._id)"></span>
           {{ friend.name }}
